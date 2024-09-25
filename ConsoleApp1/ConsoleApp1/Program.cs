@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Text;
+using static System.Runtime.InteropServices.JavaScript.JSType;
+using System.Collections.Generic;
 namespace ConsoleApp1
 {
     class Program
@@ -14,8 +17,65 @@ namespace ConsoleApp1
 
             //ex1_5();
 
-            ex2_1();
+            //ex2_1();
 
+            //ex2_3();
+
+            //ex2_4();
+
+            //ex3_1();
+
+            //ex3_2();
+
+            //ex3_3();
+
+            //ex4_1();
+
+            (int max, int min, int sum, char firstChar) funcArr(int[] arr, string hi)
+            {
+               int max = arr.Max();
+               int min = arr.Min();
+                char c = hi[0];
+
+                int sum = 0;
+                foreach(int number in arr)
+                {
+                    sum += number;
+                }
+                (int max, int min, int sum, char firstChar) myTurple = (max, min, sum, c);
+
+                return myTurple;
+            };
+
+            int[] arr = { 1, 2, 3, 4 ,5,6,7,8,9};
+            string hi = "Hello";
+
+            (int max, int min, int sum, char firstChar) myTurple = funcArr(arr, hi);
+
+            Console.WriteLine(myTurple);
+
+
+            void func1()
+            {
+                checked
+                {
+                    int imax = int.MaxValue;
+                    Console.WriteLine(imax);
+                }
+            }
+            void func2()
+            {
+                unchecked
+                {
+                    int jmax = int.MaxValue;
+                    Console.WriteLine(jmax);
+                    jmax++;
+                    Console.WriteLine(jmax);
+                }
+
+            }
+            func1();
+            func2();
         }
         static void ex1_1()
         {
@@ -200,6 +260,143 @@ namespace ConsoleApp1
 
             Console.WriteLine(newStr.Remove(6, 7));
 
+            double pi = 3.14;
+
+            string formattedPi = $"Пи = {pi}";
+            Console.WriteLine(formattedPi);
+
+
+        }
+
+        static void ex2_3()
+        {
+            string str = "";
+
+            string nullStr = null;
+
+            Console.WriteLine(string.IsNullOrEmpty(str));
+            Console.WriteLine(string.IsNullOrEmpty(nullStr));
+        }
+
+        static void ex2_4()
+        {
+            StringBuilder sb = new StringBuilder("Привет мир");
+            Console.WriteLine(sb.ToString());
+
+            sb.Remove(7, 3);
+            Console.WriteLine(sb.ToString());
+
+            sb.Insert(0, "Хай: ");
+            sb.Append("Кирилл");
+            Console.WriteLine(sb.ToString());
+        }
+
+        static void ex3_1()
+        {
+            int[][] matrix = { new[] {1, 2, 3}, new[] {4, 5, 6}, new[] { 7, 8, 9 }};
+
+            foreach (var row in matrix)
+            {
+                Console.WriteLine(string.Join(" ", row));
+            }
+        }
+
+        static void ex3_2()
+        {
+            string[] hi = { "Привет", "Хело", "Хай", "Вассап" };
+
+            foreach(var word in hi)
+            {
+                Console.WriteLine(word);
+            }
+
+            Console.WriteLine($"Длинна массива: {hi.Length}");
+
+            Console.Write("Введите место нового слова: ");
+            int position = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("Введите новое слово: ");
+            string newValue = Console.ReadLine();
+
+            hi[position] = newValue;
+
+            foreach (var word in hi)
+            {
+                Console.WriteLine(word);
+            }
+        }
+
+        static void ex3_3()
+        {
+            double[][] zmass = new double[3][];
+
+            zmass[0] = new double[2];
+            zmass[1] = new double[3];
+            zmass[2] = new double[4];
+
+            Console.WriteLine("Введите значения для первой строки (2):");
+            zmass[0][0] = double.Parse(Console.ReadLine());
+            zmass[0][1] = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("Введите значения для второй строки (3):");
+            zmass[1][0] = double.Parse(Console.ReadLine());
+            zmass[1][1] = double.Parse(Console.ReadLine());
+            zmass[1][2] = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("Введите значения для третьей строки (4):");
+            zmass[2][0] = double.Parse(Console.ReadLine());
+            zmass[2][1] = double.Parse(Console.ReadLine());
+            zmass[2][2] = double.Parse(Console.ReadLine());
+            zmass[2][3] = double.Parse(Console.ReadLine());
+
+            foreach (var row in zmass)
+            {
+                Console.WriteLine(string.Join(" ", row));
+            }
+
+            var arrH = zmass;
+
+            Console.WriteLine("-----------------");
+            foreach (var row in arrH)
+            {
+                Console.WriteLine(string.Join(" ", row));
+            }
+
+            var arrS = "Привет";
+        }
+
+        static void ex4_1()
+        {
+            var myTuple = (25, "Пример", 'A', "строка", 123456789UL);
+
+            Console.WriteLine(myTuple);
+
+            Console.WriteLine(myTuple.Item1);
+            Console.WriteLine(myTuple.Item2);
+            Console.WriteLine(myTuple.Item3);
+            Console.WriteLine(myTuple.Item4);
+            Console.WriteLine(myTuple.Item5);
+
+            (int number, string text1, char symbol, string text2, ulong largeNumber) = myTuple;
+
+            Console.WriteLine($"number: {number}");
+            Console.WriteLine($"text1: {text1}");
+            Console.WriteLine($"symbol: {symbol}");
+            Console.WriteLine($"text2: {text2}");
+            Console.WriteLine($"largeNumber: {largeNumber}");
+
+            (int num, _, char symb, _, ulong largeNum) = myTuple;
+
+            // Вывод только тех переменных, которые распаковали
+            Console.WriteLine($"number: {num}");
+            Console.WriteLine($"symbol: {symb}");
+            Console.WriteLine($"largeNumber: {largeNum}");
+
+            var myTuple2 = (10, "Привет", 'Б', "строка", 123456789UL);
+
+            bool res = (myTuple == myTuple2) ? true : false;
+
+            Console.WriteLine(res);
 
         }
     }
