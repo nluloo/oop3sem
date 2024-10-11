@@ -7,19 +7,47 @@ using System.Threading.Tasks;
 
 namespace lab3
 {
+    public class Production
+    {
+        private int ID;
+        private string name;
+
+        public Production(int ID, string name)
+        {
+            this.ID = ID;
+            this.name = name;
+        }
+
+        public int get_id_prod()
+        {
+            return this.ID;
+        }
+        public string get_name_prod()
+        {
+            return this.name;
+        }
+    }
+
     public class MyString
     {
 
         private string symbols;
+        private Production production;
 
         public MyString(string arr)
         {
             symbols = arr;
+            this.production = new Production(101, "GameStream");
         }
 
         public override string ToString()
         {
             return symbols;
+        }
+
+        public string GetProductionInfo()
+        {
+            return $"ID: {production.get_id_prod()}, Название организации: {production.get_name_prod()}";
         }
 
 
@@ -60,27 +88,7 @@ namespace lab3
         }
 
 
-
-        public class Production
-        {
-            private int ID;
-            private string name;
-
-            public Production(int ID, string name)
-            {
-                this.ID = ID;
-                this.name = name;
-            }
-
-            public int get_id_prod()
-            {
-                return this.ID;
-            }
-            public string get_name_prod()
-            {
-                return this.name;
-            }
-        }
+       
 
         public class Developer
         {
@@ -107,8 +115,10 @@ namespace lab3
             {
                 return this.department;
             }
-
-
+            public override string ToString()
+            {
+                return $"ID: {ID}, Name: {name_dev}, Department: {department}";
+            }
         }
 
 
@@ -140,16 +150,18 @@ namespace lab3
             return Regex.Matches(str, @"\b\w+\b").Count;
         }
 
+        public static int WordCount(this MyString myString)
+        {
+            return Regex.Matches(myString.ToString(), @"\b\w+\b").Count;
+        }
+
+
         public static MyString smile(this string a, int place)
         {
             var symb = new KeyValuePair<int, string>(place - 1, "♥");
             return new MyString(a.Substring(0, place - 1) + symb.Value + a.Substring(place));
         }
 
-        public static int WordCount(this MyString myString) // МБ ЧУТЬЧУТЬ ПОМЕНЯТЬ
-        {
-            return Regex.Matches(myString.ToString(), @"\b\w+\b").Count;
-        }
         public static MyString smile(this MyString a, int place)
         {
             var symb = new KeyValuePair<int, string>(place - 1, "♥");
@@ -176,9 +188,6 @@ namespace lab3
             var pair = new KeyValuePair<int, string>(3, "W");
             Console.WriteLine($"{s2} + {pair}: {s2 + pair}");
 
-            MyString.Production prod = new MyString.Production(1, "Завод");
-            Console.WriteLine(prod.get_name_prod());
-
             Console.WriteLine($"Количество символов в {s1} + {s2}: {StatisticOperation.Sum(s1, s2)}");
 
             Console.WriteLine($"Разница между количеством символов '{s1}' и '{s2}': {StatisticOperation.DifferenceMaxMin(s1, s2)}");
@@ -187,9 +196,16 @@ namespace lab3
             string s3 = "Привет как дела что делаешь";
             Console.WriteLine($"Количество слов в строке '{s3}': {StatisticOperation.WordCount(s3)}");
 
-            Console.WriteLine($"\nКоличество слов в '{new MyString("This is a test sentence")}' : {StatisticOperation.WordCount(new MyString("This is a test sentence"))}"); // ДОБАВИТЬ ДЛЯ СТРОКИ
+            Console.WriteLine($"\nКоличество слов в '{new MyString("Тест на количество слов в строке")}' : {StatisticOperation.WordCount(new MyString("Тест на количество слов в строке"))}");
 
             Console.WriteLine($"\nТест смайилка: '{new MyString("Hello")}' -> {StatisticOperation.smile(new MyString("Hello"), 2)}");
+
+
+            Console.WriteLine(s2.GetProductionInfo());
+
+            MyString.Developer developer = new MyString.Developer("Сегренёв Кирилл Сергеевич", 25, "DevOps");
+
+            Console.WriteLine(developer.ToString());
 
             Console.ReadLine();
         }
