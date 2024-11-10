@@ -17,11 +17,22 @@ namespace lab4
             count_table++;
         }
 
-        public Table(int price = -1, string name = "(", int count_det = 0)
+        public Table(int id_furn, int price = -1, string name = "(", int count_det = 0)
         {
-            set_price(price);
+            if (name == null)
+            {
+                throw new NullReferenceException("Укажите название товара.");
+            }
+            if (price < -1)
+            {
+                throw new NegativePriceException("Цена товара должна быть больше 0.", price);
+            }
+            else
+            {
+                set_price(price);
+            }
             this.name = name;
-            set_furn(1);
+            set_furn(id_furn);
             count_table++;
             this.count_det = count_det;
         }

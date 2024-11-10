@@ -12,11 +12,29 @@ namespace lab4
         private int maxBrightness;
 
 
-        public Projector(int price = -1, string name = "(", int brightness = 0)
+        public Projector(int id_tech, int price = -1, string name = "(", int brightness = 0)
         {
-            set_price(price);
+            if (name == null)
+            {
+                throw new NullReferenceException("Укажите название товара.");
+            }
+            if (id_tech != 4)
+            {
+                throw new OutOfRangeProducts("Для Монитора ID должен быть равен 4", id_tech);
+            }
+            else
+            {
+                set_tech(id_tech);
+            }
+            if (price < -1)
+            {
+                throw new NegativePriceException("Цена товара должна быть больше 0.", price);
+            }
+            else
+            {
+                set_price(price);
+            }
             this.name = name;
-            set_tech(4);
             count_proj++;
             this.maxBrightness = brightness;
         }

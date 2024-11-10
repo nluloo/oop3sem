@@ -10,7 +10,6 @@ namespace lab4
     {
         void TurnOn();
         void TurnOff();
-
         void Show();
     }
 }

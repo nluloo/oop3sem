@@ -47,10 +47,12 @@
     <Compile Include="furniture.cs" />
     <Compile Include="headphones.cs" />
     <Compile Include="Interface.cs" />
+    <Compile Include="Logger.cs" />
     <Compile Include="monitor.cs" />
     <Compile Include="PC.cs" />
     <Compile Include="Printer.cs" />
     <Compile Include="product.cs" />
+    <Compile Include="ProductExeception.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="projector.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

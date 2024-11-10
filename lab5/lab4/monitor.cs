@@ -17,11 +17,32 @@ namespace lab4
             count_monitor++;
         }
 
-        public Monitor(int price = -1, string name = "(", float disp = 0)
+        public Monitor(int id_tech, int price = -1, string name = "(", float disp = 0)
         {
-            set_price(price);
+
+            if(name == null)
+            {
+                throw new NullReferenceException("Укажите название товара.");
+            }
+            if (id_tech != 1)
+            {
+                throw new OutOfRangeProducts("Для Монитора ID должен быть равен 1", id_tech);
+            }
+            else
+            {
+                set_tech(id_tech);
+            }
+            if (price < -1)
+            {
+                throw new NegativePriceException("Цена товара должна быть больше 0.", price);
+            }
+            else
+            {
+                set_price(price);
+            }
             this.name = name;
-            set_tech(1);
+
+
             count_monitor++;
             this.disp = disp;
         }

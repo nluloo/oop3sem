@@ -1,0 +1,7 @@
+D:\labs\oop\lab5\lab4\bin\Release\lab4.exe.config
+D:\labs\oop\lab5\lab4\bin\Release\lab4.exe
+D:\labs\oop\lab5\lab4\bin\Release\lab4.pdb
+D:\labs\oop\lab5\lab4\obj\Release\lab4.csproj.AssemblyReference.cache
+D:\labs\oop\lab5\lab4\obj\Release\lab4.csproj.CoreCompileInputs.cache
+D:\labs\oop\lab5\lab4\obj\Release\lab4.exe
+D:\labs\oop\lab5\lab4\obj\Release\lab4.pdb

@@ -10,7 +10,7 @@ namespace lab4
     {
         public int id_tech;
         public string name_tech;
-
+        public int max_id_tech = 5;
         public Technique()
         {
             set_dep(1, "Техника");

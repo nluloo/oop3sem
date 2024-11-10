@@ -1,0 +1,29 @@
+[
+  {
+    "disp": 144.0,
+    "id_tech": 1,
+    "name_tech": "Monitor",
+    "id_department": 1,
+    "name_department": "Техника",
+    "price": 499,
+    "name": "DELL 321523"
+  },
+  {
+    "disp": 240.0,
+    "id_tech": 1,
+    "name_tech": "Monitor",
+    "id_department": 1,
+    "name_department": "Техника",
+    "price": 1000,
+    "name": "HP"
+  },
+  {
+    "disp": 144.0,
+    "id_tech": 1,
+    "name_tech": "Monitor",
+    "id_department": 1,
+    "name_department": "Техника",
+    "price": 700,
+    "name": "Lenovo"
+  }
+]

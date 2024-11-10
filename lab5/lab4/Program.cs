@@ -1,4 +1,6 @@
-﻿using System;
+﻿using lab6;
+using System;
+using System.Diagnostics;
 
 namespace lab4
 {
@@ -81,152 +83,239 @@ namespace lab4
     }
 
 
-
     internal class Program
     {
+        static Ilogger logger = new ConsoleLogger();
+        static void Zero()
+        {
+            try
+            {
+                int a = 100;
+                int b = 0;
+                int c = 100 / b; // zero
+            }
+            catch(DivideByZeroException ex)
+            {
+                Console.WriteLine("DivideByZeroExceptionFUNC: Исключение Zero()");
+                logger.LogException(ex);
+                throw;
+            }
+
+
+
+        }
         static void Main(string[] args)
         {
-            Product monitor = new Monitor(499, "DELL 321523", 144);
-            Product headphones = new Headphones(100, "Xiaomi", "Внутриканальные");
-            Product pc = new PC(700, "Gaming PC", 16000);
-            Product table = new Table(250, "IKEA Table", 5);
-            Product projector = new Projector(400, "Epson 503", 3000);
-            Product screen = new Screen(200, "Samsung Display", "1920x1080");
+            /*           Product monitor = new Monitor(1, 499, "DELL 321523", 144);
+                       Product headphones = new Headphones(1, 100, "Xiaomi", "Внутриканальные");
+                       Product pc = new PC(1, 700, "Gaming PC", 16000);
+                       Product table = new Table(1, 250, "IKEA Table", 5);
+                       Product projector = new Projector(1, 400, "Epson 503", 3000);
+                       Product screen = new Screen(1, 200, "Samsung Display", "1920x1080");
 
-            Product[] products = { monitor, headphones, pc, table, projector, screen };
+                       Product[] products = { monitor, headphones, pc, table, projector, screen };
 
-            Printer printer = new Printer();
+                       Printer printer = new Printer();
 
-            Furniture tablee = new Table(500, "Стол", 10);
+                       Furniture tablee = new Table(500, "Стол", 10);
 
-            foreach (Product product in products)
+                       foreach (Product product in products)
+                       {
+                           Console.WriteLine(product.ToString());
+
+                           if (product is Monitor mon)
+                           {
+                               mon.ShowFeatures();
+                           }
+                           else if (product is Headphones head)
+                           {
+                               head.ShowFeatures();
+                           }
+                           else if (product is PC pcObj)
+                           {
+                               pcObj.ShowFeatures();
+                           }
+                           else if (product is Table tableObj)
+                           {
+                               tablee.ShowFeatures();
+                               tableObj.ShowFeatures();
+                           }
+                           else if (product is Projector proj)
+                           {
+                               proj.ShowFeatures();
+                           }
+                           else if (product is Screen screenObj)
+                           {
+                               screenObj.ShowFeatures();
+                           }
+
+                           Console.WriteLine("\n=====IAmPrinting====\n");
+                           printer.IAmPrinting(product);
+                           Console.WriteLine("\n=====IAmPrinting====\n");
+                       }
+
+                       Console.WriteLine("\n--- Использование методов интерфейса Ipowerable через оператор 'as' ---\n");
+
+                       Ipowerable powerableDevice = monitor as Ipowerable;
+                       if (powerableDevice != null)
+                       {
+                           powerableDevice.TurnOn();
+                           powerableDevice.Show();
+                           powerableDevice.TurnOff();
+                       }
+
+                       Technique powerableDev = new PC(1000, "Mac", 16000);
+                       if (powerableDev != null)
+                       {
+                           powerableDev.Show();
+                       }
+
+                       powerableDevice = pc as Ipowerable;
+                       if (powerableDevice != null)
+                       {
+                           powerableDevice.TurnOn();
+                           powerableDevice.Show();
+                           powerableDevice.TurnOff();
+                       }
+
+                       powerableDevice = projector as Ipowerable;
+                       if (powerableDevice != null)
+                       {
+                           powerableDevice.TurnOn();
+                           powerableDevice.Show();
+                           powerableDevice.TurnOff();
+                       }
+
+                       powerableDevice = screen as Ipowerable;
+                       if (powerableDevice != null)
+                       {
+                           powerableDevice.TurnOn();
+                           powerableDevice.Show();
+                           powerableDevice.TurnOff();
+                       }
+
+                       powerableDevice = table as Ipowerable;
+                       if (powerableDevice != null)
+                       {
+                           powerableDevice.TurnOn();
+                           powerableDevice.Show();
+                           powerableDevice.TurnOff();
+                       }
+                       else
+                       {
+                           Console.WriteLine("Объект класса Table не реализует интерфейс Ipowerable.");
+                       }
+
+                       Product pc2 = new PC(1000, "Mac", 32000);
+
+
+                       pc2.GetHashCode();
+
+                       Console.WriteLine(pc.Equals(pc2));
+
+
+
+                       DepWorking techDepartment = new DepWorking(IdDep.Technique, TimeSpan.FromHours(9), TimeSpan.FromHours(20));
+
+                       techDepartment.ShowWorking(DayOfWeek.Monday);
+
+                       techDepartment.IsOpen(DayOfWeek.Thursday);
+
+
+                       CLabContainer container = new CLabContainer(3);
+                       CLabContainer.CLabController controller = new CLabContainer.CLabController(container);
+
+                       controller.LoadProductsFromFile("data.txt");
+
+                       controller.PrintAllItems();
+
+
+                       Console.WriteLine(controller.GetIndex(1));
+
+
+                           controller.Set_Def(0);
+                           controller.Set_Def(1);
+
+                           controller.RemoveItem(0);
+
+                           controller.DefectiItems();
+
+                           controller.SetObject(0, monitor);
+
+                           controller.PrintAllItems();
+
+                           controller.SortItemsByPrice();
+
+                           controller.PrintTotalCost();
+            */
+
+
+            logger.LogInfo("Программа запущена.");
+
+            try
             {
-                Console.WriteLine(product.ToString());
 
-                if (product is Monitor mon)
+                Debugger.Break();
+                Debug.Fail("Продолжить выполнение?");
+                Zero();
+                string productName = null;
+                Product monitor = new Monitor(1, 200, productName, 144); // null
+
+
+                int price = -200; // Пример некорректной цены
+                Debug.Assert(price >= 0, "Цена не может быть отрицательной"); // Проверка условия
+                Product monitor1 = new Monitor(1, price, "DELL 321523", 144); // negative price
+
+
+                Product table = new Table(1, 250, "IKEA Table", 5); // ид отдела
+                table.set_dep(0, "Техника");
+                IdDep tech = IdDep.Technique;
+
+                if (table is Table && table.return_id_department() == (int)tech)
                 {
-                    mon.ShowFeatures();
-                }
-                else if (product is Headphones head)
-                {
-                    head.ShowFeatures();
-                }
-                else if (product is PC pcObj)
-                {
-                    pcObj.ShowFeatures();
-                }
-                else if (product is Table tableObj)
-                {
-                    tablee.ShowFeatures();
-                    tableObj.ShowFeatures();
-                }
-                else if (product is Projector proj)
-                {
-                    proj.ShowFeatures();
-                }
-                else if (product is Screen screenObj)
-                {
-                    screenObj.ShowFeatures();
+                    throw new TechOrFurnException("TechOrFurnException: Неверно указан id отдела", "Техника");
                 }
 
-                Console.WriteLine("\n=====IAmPrinting====\n");
-                printer.IAmPrinting(product);
-                Console.WriteLine("\n=====IAmPrinting====\n");
+
+                Product monitor3 = new Monitor(2, 499, "DELL 321523", 144); // Назначение неправильно ид 
+
+
             }
-
-            Console.WriteLine("\n--- Использование методов интерфейса Ipowerable через оператор 'as' ---\n");
-
-            Ipowerable powerableDevice = monitor as Ipowerable;
-            if (powerableDevice != null)
+            catch (DivideByZeroException ex)
             {
-                powerableDevice.TurnOn();
-                powerableDevice.Show();
-                powerableDevice.TurnOff();
+                Console.WriteLine($"DivideByZeroException: {ex.Message}");
+                logger.LogException(ex);
             }
-
-            Technique powerableDev = new PC(1000, "Mac", 16000);
-            if (powerableDev != null)
+            catch (NullReferenceException ne)
             {
-                powerableDev.Show();
+                Console.WriteLine($"NullReferenceException: {ne.Message}");
+                logger.LogException(ne);
             }
-
-            powerableDevice = pc as Ipowerable;
-            if (powerableDevice != null)
+            catch(NegativePriceException nep)
             {
-                powerableDevice.TurnOn();
-                powerableDevice.Show();
-                powerableDevice.TurnOff();
+                Console.WriteLine($"NegativePriceException: {nep.Message}. Price: ${nep.InvalidPrice}");
+                logger.LogException(nep);
             }
-
-            powerableDevice = projector as Ipowerable;
-            if (powerableDevice != null)
+            catch(TechOrFurnException te)
             {
-                powerableDevice.TurnOn();
-                powerableDevice.Show();
-                powerableDevice.TurnOff();
+                Console.WriteLine(te.Message);
+                logger.LogException(te);
+            }
+            catch (OutOfRangeProducts exr) {
+                Console.WriteLine($"OutOfRangeProducts: {exr.Message}\nВведенное значение: {exr.value}");
+                logger.LogException(exr);
             }
 
-            powerableDevice = screen as Ipowerable;
-            if (powerableDevice != null)
+            catch(Exception e) 
             {
-                powerableDevice.TurnOn();
-                powerableDevice.Show();
-                powerableDevice.TurnOff();
+                Console.WriteLine($"Exception: {e.Message}.");
+                logger.LogException(e);
             }
-
-            powerableDevice = table as Ipowerable;
-            if (powerableDevice != null)
+            finally
             {
-                powerableDevice.TurnOn();
-                powerableDevice.Show();
-                powerableDevice.TurnOff();
-            }
-            else
-            {
-                Console.WriteLine("Объект класса Table не реализует интерфейс Ipowerable.");
+                logger.LogInfo("Программа завершена. Все операции выполнены.");
             }
 
-            Product pc2 = new PC(1000, "Mac", 32000);
-
-
-            pc2.GetHashCode();
-
-            Console.WriteLine(pc.Equals(pc2));
-
-
-
-            DepWorking techDepartment = new DepWorking(IdDep.Technique, TimeSpan.FromHours(9), TimeSpan.FromHours(20));
-
-            techDepartment.ShowWorking(DayOfWeek.Monday);
-
-            techDepartment.IsOpen(DayOfWeek.Thursday);
-
-
-            CLabContainer container = new CLabContainer(3);
-            CLabContainer.CLabController controller = new CLabContainer.CLabController(container);
-
-            controller.LoadProductsFromFile("data.txt");
-
-            controller.PrintAllItems();
-
-
-            Console.WriteLine(controller.GetIndex(1));
-
-
-                controller.Set_Def(0);
-                controller.Set_Def(1);
-
-                controller.RemoveItem(0);
-
-                controller.DefectiItems();
-
-                controller.SetObject(0, monitor);
-
-                controller.PrintAllItems();
-
-                controller.SortItemsByPrice();
-
-                controller.PrintTotalCost();
 
 
             Console.ReadLine();

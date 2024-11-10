@@ -206,7 +206,7 @@ namespace lab4
             {
                 container.Del_Defect();
             }
-            public void LoadProductsFromFile(string filePath)
+/*        public void LoadProductsFromFile(string filePath)
             {
                 string[] lines = System.IO.File.ReadAllLines(filePath);
                 foreach (var line in lines)
@@ -254,6 +254,7 @@ namespace lab4
                     }
                 }
             }
+*/
         }
     }
 }

@@ -1,0 +1,40 @@
+14.10.2024 11:06:11: [INFO] Программа запущена.
+14.10.2024 11:06:16: [EXCEPTION] Не удается найти базу данных под данным именем
+Stack Trace:    в lab6.SessionDataBase.set_Name_DataBase(String value) в D:\labs\oop\lab6\lab6\Program.cs:строка 104
+   в lab6.Program.Main(String[] args) в D:\labs\oop\lab6\lab6\Program.cs:строка 171
+14.10.2024 11:06:16: [INFO] Программа завершена. Все операции выполнены.
+14.10.2024 11:07:17: [INFO] Программа запущена.
+14.10.2024 11:07:19: [EXCEPTION] Не удается найти базу данных под данным именем
+Stack Trace:    в lab6.SessionDataBase.set_Name_DataBase(String value) в D:\labs\oop\lab6\lab6\Program.cs:строка 99
+   в lab6.Program.Main(String[] args) в D:\labs\oop\lab6\lab6\Program.cs:строка 166
+14.10.2024 11:07:19: [INFO] Программа завершена. Все операции выполнены.
+14.10.2024 11:07:37: [INFO] Программа запущена.
+14.10.2024 11:07:37: [EXCEPTION] Заданный аргумент находится вне диапазона допустимых значений.
+Имя параметра: Выход за пределы базы данных
+Stack Trace:    в lab6.SessionDataBase.set_Set_number(Int32 value) в D:\labs\oop\lab6\lab6\Program.cs:строка 83
+   в lab6.Program.Main(String[] args) в D:\labs\oop\lab6\lab6\Program.cs:строка 163
+14.10.2024 11:07:37: [INFO] Программа завершена. Все операции выполнены.
+14.10.2024 11:10:22: INFO: Программа запущена.
+14.10.2024 11:10:22: EXCEPTION: Заданный аргумент находится вне диапазона допустимых значений.
+Имя параметра: Выход за пределы базы данных
+Stack Trace:    в lab6.SessionDataBase.set_Set_number(Int32 value) в D:\labs\oop\lab6\lab6\Program.cs:строка 83
+   в lab6.Program.Main(String[] args) в D:\labs\oop\lab6\lab6\Program.cs:строка 163
+14.10.2024 11:10:22: INFO: Программа завершена. Все операции выполнены.
+14.10.2024 11:21:44: INFO: Программа запущена.
+14.10.2024 11:21:44: EXCEPTION: Заданный аргумент находится вне диапазона допустимых значений.
+Имя параметра: Выход за пределы базы данных
+Stack Trace:    в lab6.SessionDataBase.set_Set_number(Int32 value) в D:\labs\oop\lab6\lab6\Program.cs:строка 120
+   в lab6.Program.Main(String[] args) в D:\labs\oop\lab6\lab6\Program.cs:строка 205
+14.10.2024 11:21:44: INFO: Программа завершена. Все операции выполнены.
+14.10.2024 11:23:01: INFO: Программа запущена.
+14.10.2024 11:23:01: EXCEPTION: Заданный аргумент находится вне диапазона допустимых значений.
+Имя параметра: Выход за пределы базы данных
+Stack Trace:    в lab6.SessionDataBase.set_Set_number(Int32 value) в D:\labs\oop\lab6\lab6\Program.cs:строка 97
+   в lab6.Program.Main(String[] args) в D:\labs\oop\lab6\lab6\Program.cs:строка 182
+14.10.2024 11:23:01: INFO: Программа завершена. Все операции выполнены.
+14.10.2024 11:23:55: INFO: Программа запущена.
+14.10.2024 11:23:55: EXCEPTION: Заданный аргумент находится вне диапазона допустимых значений.
+Имя параметра: Выход за пределы базы данных
+Stack Trace:    в lab6.SessionDataBase.set_Set_number(Int32 value) в D:\labs\oop\lab6\lab6\Program.cs:строка 34
+   в lab6.Program.Main(String[] args) в D:\labs\oop\lab6\lab6\Program.cs:строка 119
+14.10.2024 11:23:55: INFO: Программа завершена. Все операции выполнены.

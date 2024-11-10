@@ -13,9 +13,27 @@ namespace lab4
 
         public Screen(int price = -1, string name = "(", string type_head = null)
         {
-            set_price(price);
+            if (name == null)
+            {
+                throw new NullReferenceException("Укажите название товара.");
+            }
+            if (id_tech != 5)
+            {
+                throw new OutOfRangeProducts("Для Экрана ID должен быть равен 5", id_tech);
+            }
+            else
+            {
+                set_tech(id_tech);
+            }
+            if (price < -1)
+            {
+                throw new NegativePriceException("Цена товара должна быть больше 0.", price);
+            }
+            else
+            {
+                set_price(price);
+            }
             this.name = name;
-            set_tech(3);
             count_screen++;
             this.resolution = type_head;
         }

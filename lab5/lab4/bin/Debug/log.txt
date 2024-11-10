@@ -1,0 +1,157 @@
+15.10.2024 12:17:16: INFO: Программа запущена.
+15.10.2024 12:17:16: EXCEPTION: Попытка деления на нуль.
+Stack Trace:    в lab4.Program.Main(String[] args) в D:\labs\oop\lab5\lab4\Program.cs:строка 241
+15.10.2024 12:21:40: INFO: Программа запущена.
+15.10.2024 12:21:40: EXCEPTION: Попытка деления на нуль.
+Stack Trace:    в lab4.Program.Main(String[] args) в D:\labs\oop\lab5\lab4\Program.cs:строка 243
+15.10.2024 12:21:40: INFO: Программа завершена. Все операции выполнены.
+15.10.2024 12:22:04: INFO: Программа запущена.
+15.10.2024 12:22:04: EXCEPTION: Укажите название товара.
+Stack Trace:    в lab4.Monitor..ctor(Int32 id_tech, Int32 price, String name, Single disp) в D:\labs\oop\lab5\lab4\monitor.cs:строка 25
+   в lab4.Program.Main(String[] args) в D:\labs\oop\lab5\lab4\Program.cs:строка 245
+15.10.2024 12:22:04: INFO: Программа завершена. Все операции выполнены.
+15.10.2024 12:25:21: INFO: Программа запущена.
+15.10.2024 12:25:21: EXCEPTION: Попытка деления на нуль.
+Stack Trace:    в lab4.Program.Main(String[] args) в D:\labs\oop\lab5\lab4\Program.cs:строка 243
+15.10.2024 12:25:25: INFO: Программа запущена.
+15.10.2024 12:25:25: EXCEPTION: Попытка деления на нуль.
+Stack Trace:    в lab4.Program.Main(String[] args) в D:\labs\oop\lab5\lab4\Program.cs:строка 243
+15.10.2024 12:27:00: INFO: Программа запущена.
+15.10.2024 12:27:00: EXCEPTION: Попытка деления на нуль.
+Stack Trace:    в lab4.Program.Main(String[] args) в D:\labs\oop\lab5\lab4\Program.cs:строка 243
+15.10.2024 12:29:32: INFO: Программа запущена.
+15.10.2024 12:29:32: EXCEPTION: Укажите название товара.
+Stack Trace:    в lab4.Monitor..ctor(Int32 id_tech, Int32 price, String name, Single disp) в D:\labs\oop\lab5\lab4\monitor.cs:строка 25
+   в lab4.Program.Main(String[] args) в D:\labs\oop\lab5\lab4\Program.cs:строка 260
+15.10.2024 12:29:32: INFO: Программа завершена. Все операции выполнены.
+15.10.2024 12:29:41: INFO: Программа запущена.
+15.10.2024 12:29:41: EXCEPTION: Попытка деления на нуль.
+Stack Trace:    в lab4.Program.Zero() в D:\labs\oop\lab5\lab4\Program.cs:строка 95
+15.10.2024 12:29:41: EXCEPTION: Попытка деления на нуль.
+Stack Trace:    в lab4.Program.Zero() в D:\labs\oop\lab5\lab4\Program.cs:строка 100
+   в lab4.Program.Main(String[] args) в D:\labs\oop\lab5\lab4\Program.cs:строка 260
+15.10.2024 12:29:47: INFO: Программа запущена.
+15.10.2024 12:29:47: EXCEPTION: Попытка деления на нуль.
+Stack Trace:    в lab4.Program.Zero() в D:\labs\oop\lab5\lab4\Program.cs:строка 95
+15.10.2024 12:29:47: EXCEPTION: Попытка деления на нуль.
+Stack Trace:    в lab4.Program.Zero() в D:\labs\oop\lab5\lab4\Program.cs:строка 100
+   в lab4.Program.Main(String[] args) в D:\labs\oop\lab5\lab4\Program.cs:строка 260
+15.10.2024 12:29:47: INFO: Программа завершена. Все операции выполнены.
+15.10.2024 12:32:17: INFO: Программа запущена.
+15.10.2024 12:32:17: EXCEPTION: Заданный аргумент находится вне диапазона допустимых значений.
+Имя параметра: Цена товара должна быть больше 0.
+Stack Trace:    в lab4.Monitor..ctor(Int32 id_tech, Int32 price, String name, Single disp) в D:\labs\oop\lab5\lab4\monitor.cs:строка 37
+   в lab4.Program.Main(String[] args) в D:\labs\oop\lab5\lab4\Program.cs:строка 264
+15.10.2024 12:32:17: INFO: Программа завершена. Все операции выполнены.
+15.10.2024 12:32:27: INFO: Программа запущена.
+15.10.2024 12:32:59: INFO: Программа запущена.
+15.10.2024 12:32:59: EXCEPTION: Попытка деления на нуль.
+Stack Trace:    в lab4.Program.Zero() в D:\labs\oop\lab5\lab4\Program.cs:строка 96
+15.10.2024 12:32:59: EXCEPTION: Попытка деления на нуль.
+Stack Trace:    в lab4.Program.Zero() в D:\labs\oop\lab5\lab4\Program.cs:строка 101
+   в lab4.Program.Main(String[] args) в D:\labs\oop\lab5\lab4\Program.cs:строка 260
+15.10.2024 12:32:59: INFO: Программа завершена. Все операции выполнены.
+15.10.2024 12:33:06: INFO: Программа запущена.
+15.10.2024 12:33:11: INFO: Программа запущена.
+15.10.2024 12:33:14: EXCEPTION: Заданный аргумент находится вне диапазона допустимых значений.
+Имя параметра: Цена товара должна быть больше 0.
+Stack Trace:    в lab4.Monitor..ctor(Int32 id_tech, Int32 price, String name, Single disp) в D:\labs\oop\lab5\lab4\monitor.cs:строка 37
+   в lab4.Program.Main(String[] args) в D:\labs\oop\lab5\lab4\Program.cs:строка 265
+15.10.2024 12:33:14: INFO: Программа завершена. Все операции выполнены.
+15.10.2024 12:34:24: INFO: Программа запущена.
+15.10.2024 12:34:24: EXCEPTION: TechOrFurnException: Неверно указан id отдела
+Stack Trace:    в lab4.Program.Main(String[] args) в D:\labs\oop\lab5\lab4\Program.cs:строка 264
+15.10.2024 12:34:24: INFO: Программа завершена. Все операции выполнены.
+17.10.2024 13:49:21: INFO: Программа запущена.
+17.10.2024 13:50:48: INFO: Программа запущена.
+17.10.2024 13:51:01: INFO: Программа запущена.
+17.10.2024 13:51:05: EXCEPTION: Попытка деления на нуль.
+Stack Trace:    в lab4.Program.Zero() в D:\labs\oop\lab5\lab4\Program.cs:строка 96
+17.10.2024 13:51:05: EXCEPTION: Попытка деления на нуль.
+Stack Trace:    в lab4.Program.Zero() в D:\labs\oop\lab5\lab4\Program.cs:строка 101
+   в lab4.Program.Main(String[] args) в D:\labs\oop\lab5\lab4\Program.cs:строка 258
+17.10.2024 13:51:05: INFO: Программа завершена. Все операции выполнены.
+17.10.2024 13:52:08: INFO: Программа запущена.
+17.10.2024 13:57:58: INFO: Программа запущена.
+17.10.2024 13:58:01: EXCEPTION: Заданный аргумент находится вне диапазона допустимых значений.
+Имя параметра: Цена товара должна быть больше 0.
+Stack Trace:    в lab4.Monitor..ctor(Int32 id_tech, Int32 price, String name, Single disp) в D:\labs\oop\lab5\lab4\monitor.cs:строка 37
+   в lab4.Program.Main(String[] args) в D:\labs\oop\lab5\lab4\Program.cs:строка 262
+17.10.2024 13:58:01: INFO: Программа завершена. Все операции выполнены.
+17.10.2024 13:58:15: INFO: Программа запущена.
+17.10.2024 13:58:15: EXCEPTION: TechOrFurnException: Неверно указан id отдела
+Stack Trace:    в lab4.Program.Main(String[] args) в D:\labs\oop\lab5\lab4\Program.cs:строка 266
+17.10.2024 13:58:15: INFO: Программа завершена. Все операции выполнены.
+17.10.2024 13:58:41: INFO: Программа запущена.
+17.10.2024 13:58:41: EXCEPTION: Заданный аргумент находится вне диапазона допустимых значений.
+Имя параметра: Для Монитора ID должен быть равен 1
+Stack Trace:    в lab4.Monitor..ctor(Int32 id_tech, Int32 price, String name, Single disp) в D:\labs\oop\lab5\lab4\monitor.cs:строка 29
+   в lab4.Program.Main(String[] args) в D:\labs\oop\lab5\lab4\Program.cs:строка 260
+17.10.2024 13:58:41: INFO: Программа завершена. Все операции выполнены.
+17.10.2024 14:03:48: INFO: Программа запущена.
+17.10.2024 14:03:50: INFO: Программа запущена.
+17.10.2024 14:03:52: EXCEPTION: Попытка деления на нуль.
+Stack Trace:    в lab4.Program.Zero() в D:\labs\oop\lab5\lab4\Program.cs:строка 96
+17.10.2024 14:03:52: EXCEPTION: Попытка деления на нуль.
+Stack Trace:    в lab4.Program.Zero() в D:\labs\oop\lab5\lab4\Program.cs:строка 102
+   в lab4.Program.Main(String[] args) в D:\labs\oop\lab5\lab4\Program.cs:строка 261
+17.10.2024 14:03:52: INFO: Программа завершена. Все операции выполнены.
+17.10.2024 14:04:17: INFO: Программа запущена.
+17.10.2024 14:04:19: EXCEPTION: Попытка деления на нуль.
+Stack Trace:    в lab4.Program.Zero() в D:\labs\oop\lab5\lab4\Program.cs:строка 96
+17.10.2024 14:04:19: EXCEPTION: Попытка деления на нуль.
+Stack Trace:    в lab4.Program.Zero() в D:\labs\oop\lab5\lab4\Program.cs:строка 102
+   в lab4.Program.Main(String[] args) в D:\labs\oop\lab5\lab4\Program.cs:строка 261
+17.10.2024 14:04:19: INFO: Программа завершена. Все операции выполнены.
+17.10.2024 14:04:34: INFO: Программа запущена.
+17.10.2024 14:04:36: EXCEPTION: Попытка деления на нуль.
+Stack Trace:    в lab4.Program.Zero() в D:\labs\oop\lab5\lab4\Program.cs:строка 96
+17.10.2024 14:04:36: EXCEPTION: Попытка деления на нуль.
+Stack Trace:    в lab4.Program.Zero() в D:\labs\oop\lab5\lab4\Program.cs:строка 102
+   в lab4.Program.Main(String[] args) в D:\labs\oop\lab5\lab4\Program.cs:строка 261
+17.10.2024 14:04:36: INFO: Программа завершена. Все операции выполнены.
+17.10.2024 14:44:13: INFO: Программа запущена.
+17.10.2024 14:44:15: EXCEPTION: Заданный аргумент находится вне диапазона допустимых значений.
+Имя параметра: Цена товара должна быть больше 0.
+Stack Trace:    в lab4.Monitor..ctor(Int32 id_tech, Int32 price, String name, Single disp) в D:\labs\oop\lab5\lab4\monitor.cs:строка 37
+   в lab4.Program.Main(String[] args) в D:\labs\oop\lab5\lab4\Program.cs:строка 261
+17.10.2024 14:44:15: INFO: Программа завершена. Все операции выполнены.
+17.10.2024 14:45:07: INFO: Программа запущена.
+17.10.2024 14:45:17: INFO: Программа запущена.
+17.10.2024 14:45:19: EXCEPTION: Заданный аргумент находится вне диапазона допустимых значений.
+Имя параметра: Цена товара должна быть больше 0.
+Stack Trace:    в lab4.Monitor..ctor(Int32 id_tech, Int32 price, String name, Single disp) в D:\labs\oop\lab5\lab4\monitor.cs:строка 37
+   в lab4.Program.Main(String[] args) в D:\labs\oop\lab5\lab4\Program.cs:строка 263
+17.10.2024 14:45:19: INFO: Программа завершена. Все операции выполнены.
+17.10.2024 14:46:24: INFO: Программа запущена.
+17.10.2024 14:46:26: EXCEPTION: Попытка деления на нуль.
+Stack Trace:    в lab4.Program.Zero() в D:\labs\oop\lab5\lab4\Program.cs:строка 96
+17.10.2024 14:46:34: INFO: Программа запущена.
+17.10.2024 14:49:31: INFO: Программа запущена.
+17.10.2024 14:49:34: EXCEPTION: Попытка деления на нуль.
+Stack Trace:    в lab4.Program.Zero() в D:\labs\oop\lab5\lab4\Program.cs:строка 96
+17.10.2024 14:49:34: EXCEPTION: Попытка деления на нуль.
+Stack Trace:    в lab4.Program.Zero() в D:\labs\oop\lab5\lab4\Program.cs:строка 102
+   в lab4.Program.Main(String[] args) в D:\labs\oop\lab5\lab4\Program.cs:строка 261
+17.10.2024 14:49:34: INFO: Программа завершена. Все операции выполнены.
+17.10.2024 14:49:55: INFO: Программа запущена.
+17.10.2024 14:49:55: EXCEPTION: Укажите название товара.
+Stack Trace:    в lab4.Monitor..ctor(Int32 id_tech, Int32 price, String name, Single disp) в D:\labs\oop\lab5\lab4\monitor.cs:строка 25
+   в lab4.Program.Main(String[] args) в D:\labs\oop\lab5\lab4\Program.cs:строка 261
+17.10.2024 14:49:55: INFO: Программа завершена. Все операции выполнены.
+17.10.2024 14:51:12: INFO: Программа запущена.
+17.10.2024 14:51:24: EXCEPTION: Заданный аргумент находится вне диапазона допустимых значений.
+Имя параметра: Цена товара должна быть больше 0.
+Stack Trace:    в lab4.Monitor..ctor(Int32 id_tech, Int32 price, String name, Single disp) в D:\labs\oop\lab5\lab4\monitor.cs:строка 37
+   в lab4.Program.Main(String[] args) в D:\labs\oop\lab5\lab4\Program.cs:строка 263
+17.10.2024 14:51:24: INFO: Программа завершена. Все операции выполнены.
+17.10.2024 14:52:09: INFO: Программа запущена.
+17.10.2024 14:52:10: EXCEPTION: TechOrFurnException: Неверно указан id отдела
+Stack Trace:    в lab4.Program.Main(String[] args) в D:\labs\oop\lab5\lab4\Program.cs:строка 268
+17.10.2024 14:52:10: INFO: Программа завершена. Все операции выполнены.
+17.10.2024 14:52:48: INFO: Программа запущена.
+17.10.2024 14:52:49: EXCEPTION: Заданный аргумент находится вне диапазона допустимых значений.
+Имя параметра: Для Монитора ID должен быть равен 1
+Stack Trace:    в lab4.Monitor..ctor(Int32 id_tech, Int32 price, String name, Single disp) в D:\labs\oop\lab5\lab4\monitor.cs:строка 29
+   в lab4.Program.Main(String[] args) в D:\labs\oop\lab5\lab4\Program.cs:строка 260
+17.10.2024 14:52:49: INFO: Программа завершена. Все операции выполнены.

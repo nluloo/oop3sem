@@ -11,11 +11,29 @@ namespace lab4
         private int ram_pc;
         static int count_pc = 0;
 
-        public PC(int price = -1, string name = "(", int ram_pc = 0)
+        public PC(int id_tech, int price = -1, string name = "(", int ram_pc = 0)
         {
-            set_price(price);
+            if (name == null)
+            {
+                throw new NullReferenceException("Укажите название товара.");
+            }
+            if (id_tech != 2)
+            {
+                throw new OutOfRangeProducts("Для ПК ID должен быть равен 2", id_tech);
+            }
+            else
+            {
+                set_tech(id_tech);
+            }
+            if (price < -1)
+            {
+                throw new NegativePriceException("Цена товара должна быть больше 0.", price);
+            }
+            else
+            {
+                set_price(price);
+            }
             this.name = name;
-            set_tech(2);
             count_pc++;
             this.ram_pc = ram_pc;
         }
