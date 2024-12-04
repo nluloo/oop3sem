@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace lab4
 {
@@ -12,6 +13,8 @@ namespace lab4
             Product table = new Table(250, "IKEA Table", 5);
             Product projector = new Projector(400, "Epson 503", 3000);
             Product screen = new Screen(200, "Samsung Display", "1920x1080");
+
+            BinaryFormatter bf = new BinaryFormatter();
 
             Product[] products = { monitor, headphones, pc, table, projector, screen };
 

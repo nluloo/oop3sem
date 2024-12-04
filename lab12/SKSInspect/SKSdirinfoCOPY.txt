@@ -1,0 +1,62 @@
+Список папок: 
+$RECYCLE.BIN
+7-Zip
+arch
+cipher
+Config.Msi
+DBeaver
+debian
+english
+labs
+Microsoft VS Code
+myNotes
+NFS Under2
+Oracle
+PostgreSQL
+programs
+Pummel Party
+qBittorrent
+Recovery
+SQL course
+steam
+System Volume Information
+Telegram Desktop
+typescript
+ubuntu
+VirtualBox VMs
+virus
+Visual Studio
+VM BOX
+VPN
+wallpaper
+Список файлов: 
+.c6e06b89309412fb8e98158c1f93fe942a532c9d.parts
+apache-maven-3.9.8-bin.zip
+config.cfg
+coreldraw-25-0-0-17.exe
+dbeaver-ce-24.1.0-x86_64-setup.exe
+desktop.ini
+GeForce_Experience_v3.28.0.417.exe
+Install League of Legends ru.exe
+Install VALORANT.exe
+jdk-21_windows-x64_bin.exe
+jenkins.msi
+minikube-installer.exe
+Net1.net
+NetCrackerPro4.1.zip
+Obsidian.1.5.12.exe
+Prakticheskoe_zadanie_13 (1).docx
+python-3.12.2-amd64.exe
+SE_lab17.zip
+SE_Lab17E294D0D0D0D0D1202.zip
+SE_Lab19.zip
+speakout-sample-pack-new.zip
+tmb_183638_4936.jpg
+ubuntu-24.04.1-desktop-amd64.iso
+userconfig.cfg
+VirtualBox-7.0.18-162988-Win.exe
+Лекции.zip
+Лекция 1-4 (Топологии_Методы доступа_Архитектура).pptx
+Лист_задания_Чёрная.docx
+Ответы на тест №1.docx
+ответы.docx

@@ -23,7 +23,7 @@ namespace lab9
 
             manager.PrintAllConcerts();
 
-            Console.WriteLine("\nДемонстрация работы foreach:");
+            Console.WriteLine("\nДемонстрация работы foreach:"); // Без enumarable не работает
             foreach (var concert in manager)
             {
                 Console.WriteLine(concert);
@@ -37,6 +37,8 @@ namespace lab9
             int RemoveId = 3;
             Console.WriteLine($"\nУдаление концерта из коллекции c ID {RemoveId}");
             manager.RemoveConcert(RemoveId);
+
+            manager.PrintAllConcerts();
 
             Console.ReadLine();
             Console.Clear();
@@ -59,7 +61,7 @@ namespace lab9
             }
 
             int[] Remove = { 1, 2, 3 };
-            
+                
             for(int i = 0; i < Remove.Length; i++)
             {
                 dict.Remove(Remove[i]);
@@ -71,9 +73,10 @@ namespace lab9
                 Console.WriteLine($"Ключ: {item.Key}, Значение: {item.Value}");
             }
 
-            Console.WriteLine("\nКоллекция после изменения: ");
-            dict[6] = 'g';
+            Console.WriteLine("\nКоллекция после изменения(добавление новых элементов): ");
+            dict[6] = 'g'; 
             dict[0] = 'z';
+
             foreach (var item in dict)
             {
                 Console.WriteLine($"Ключ: {item.Key}, Значение: {item.Value}");
@@ -92,9 +95,10 @@ namespace lab9
                 Console.WriteLine($"Значение: {item}");
             }
 
-            if (list.Contains('g'))
+            char items = 'g';
+            if (list.Contains(items))
             {
-                Console.WriteLine("Данный элемент находится во второй коллекции");
+                Console.WriteLine($"Элемент '{items}' находится во второй коллекции");
             }
             else
             {

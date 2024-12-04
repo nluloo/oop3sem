@@ -1,0 +1,119 @@
+Задание 1: lab11, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Задание 2: Количество объявленных публичных конструкторов: 2
+Задание 3: Все объявленные публичные методы
+1. Hello1
+2. hello
+3. GetEnumerator
+4. Equals
+5. GetHashCode
+6. GetType
+7. ToString
+
+Задание 4: Все поля данного класса
+1. primerParam
+2. primerPrivate
+
+Задание 5: Все интерфейсы
+1. IEnumerable`1
+2. IEnumerable
+
+Задание 6: Имена методов с данным типом в параметрах
+1. Hello1
+
+Задание 1: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Задание 2: Количество объявленных публичных конструкторов: 8
+Задание 3: Все объявленные публичные методы
+1. Equals
+2. Equals
+3. Equals
+4. CopyTo
+5. ToCharArray
+6. ToCharArray
+7. GetHashCode
+8. Split
+9. Split
+10. Split
+11. Split
+12. Split
+13. Split
+14. Substring
+15. Substring
+16. Trim
+17. TrimStart
+18. TrimEnd
+19. IsNormalized
+20. IsNormalized
+21. Normalize
+22. Normalize
+23. CompareTo
+24. CompareTo
+25. Contains
+26. EndsWith
+27. EndsWith
+28. EndsWith
+29. IndexOf
+30. IndexOf
+31. IndexOfAny
+32. IndexOfAny
+33. IndexOf
+34. IndexOf
+35. IndexOf
+36. IndexOf
+37. IndexOf
+38. IndexOf
+39. LastIndexOf
+40. LastIndexOf
+41. LastIndexOfAny
+42. LastIndexOfAny
+43. LastIndexOf
+44. LastIndexOf
+45. LastIndexOf
+46. LastIndexOf
+47. LastIndexOf
+48. LastIndexOf
+49. PadLeft
+50. PadLeft
+51. PadRight
+52. PadRight
+53. StartsWith
+54. StartsWith
+55. StartsWith
+56. ToLower
+57. ToLower
+58. ToLowerInvariant
+59. ToUpper
+60. ToUpper
+61. ToUpperInvariant
+62. ToString
+63. ToString
+64. Clone
+65. Trim
+66. Insert
+67. Replace
+68. Replace
+69. Remove
+70. Remove
+71. GetTypeCode
+72. GetEnumerator
+73. get_Chars
+74. get_Length
+75. IndexOf
+76. IndexOfAny
+77. LastIndexOf
+78. LastIndexOfAny
+79. GetType
+
+Задание 4: Все поля данного класса
+1. m_stringLength
+2. m_firstChar
+3. Empty
+4. TrimHead
+5. TrimTail
+6. TrimBoth
+7. charPtrAlignConst
+8. alignConst
+
+Задание 5: Все интерфейсы
+1. IEnumerable`1
+2. IEnumerable
+
