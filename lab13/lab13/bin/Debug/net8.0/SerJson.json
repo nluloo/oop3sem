@@ -1,0 +1,9 @@
+{
+  "$type": "lab13.PC, lab13",
+  "ram_pc": 8000,
+  "id_tech": 2,
+  "name_tech": "PC",
+  "id_department": 1,
+  "price": 3000,
+  "name": "GAMEING"
+}

@@ -10,21 +10,22 @@ namespace lab12
     {
         static void Main(string[] args)
         {
-            // Пример использования класса XXXLog
+            
             SKSLog log = new SKSLog("SKSlogfile.txt");
 
-            // Логирование действий пользователя
+            
             log.LogAction("Создание файла", "D:\\project\\file.txt");
             log.LogAction("Удаление файла", "D:\\project\\file.txt");
 
-            // Чтение лог-файла
+            
             Console.WriteLine("Содержимое лог-файла:");
             log.ReadLog();
-
-            // Поиск в лог-файле
+            Console.ReadLine();
+            Console.Clear();
             Console.WriteLine("Результаты поиска по 'Создание':");
+            log.SearchInLog("Создание");
 
-
+            //2 Задание
             SKSDiskInfo.DiskInfo("D:\\", log);
 
             SKSFileInfo.infoFile(@"D:\labs\putty.exe", log);
@@ -32,12 +33,15 @@ namespace lab12
 
             SKSDirInfo.DirInfo("D:\\labs", log);
 
-
+            //3 Задание
             SKSFileManager.SKSInspect("D:\\", log);
 
             SKSFileManager.CopyFiles(@"D:\\labs", ".exe", log);
 
-            SKSFileManager.Archive(@"D:\labs\oop\lab12\SKSInspect", log);
+            var path = Path.Combine("D:\\", "labs", "oop", "lab12", "SKSInspect");
+
+            SKSFileManager.Archive(path, log);
+            Console.ReadLine() ;
             Console.Clear();
             DateTime date = new DateTime(2024, 12, 2, 23,0,0);
             DateTime date2 = new DateTime(2024, 12, 2, 23, 59, 0);
@@ -47,7 +51,7 @@ namespace lab12
             SKSLog.SearchByDateRange(date, date2);
             Console.ReadLine();
             Console.Clear();
-            log.SearchInLog("Создание");
+
             Console.ReadLine();
             Console.Clear();
 

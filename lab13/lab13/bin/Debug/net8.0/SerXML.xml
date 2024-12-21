@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Product xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="PC">
+  <id_department>1</id_department>
+  <price>1000</price>
+  <name>LAPTOP</name>
+  <id_tech>2</id_tech>
+  <name_tech>PC</name_tech>
+  <ram_pc>16</ram_pc>
+</Product>

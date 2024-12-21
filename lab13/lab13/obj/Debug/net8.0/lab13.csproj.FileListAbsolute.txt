@@ -13,3 +13,6 @@ D:\labs\oop\lab13\lab13\obj\Debug\net8.0\refint\lab13.dll
 D:\labs\oop\lab13\lab13\obj\Debug\net8.0\lab13.pdb
 D:\labs\oop\lab13\lab13\obj\Debug\net8.0\lab13.genruntimeconfig.cache
 D:\labs\oop\lab13\lab13\obj\Debug\net8.0\ref\lab13.dll
+D:\labs\oop\lab13\lab13\bin\Debug\net8.0\Newtonsoft.Json.dll
+D:\labs\oop\lab13\lab13\obj\Debug\net8.0\lab13.csproj.AssemblyReference.cache
+D:\labs\oop\lab13\lab13\obj\Debug\net8.0\lab13.csproj.CopyComplete

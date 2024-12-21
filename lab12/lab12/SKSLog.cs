@@ -14,32 +14,20 @@ namespace lab12
 
         public void LogAction(string action, string filePath = "")
         {
-            StreamWriter writer = null;
             try
             {
-                writer = new StreamWriter(logFilename, true);
-                string logEntry = $"{DateTime.Now}: {action} - {filePath}";
-                writer.WriteLine(logEntry);
+                using (StreamWriter writer = new StreamWriter(logFilename, true))
+                {
+                    string logEntry = $"{DateTime.Now}: {action} - {filePath}";
+                    writer.WriteLine(logEntry);
+                } 
             }
             catch (Exception ex)
             {
                 Console.WriteLine($"Ошибка при записи в файл: {ex.Message}");
             }
-            finally
-            {
-                if (writer != null)
-                {
-                    try
-                    {
-                        writer.Close();
-                    }
-                    catch (Exception ex)
-                    {
-                        Console.WriteLine($"Ошибка при закрытии файла: {ex.Message}");
-                    }
-                }
-            }
         }
+
 
         public void ReadLog()
         {
@@ -68,19 +56,12 @@ namespace lab12
             {
                 if (reader != null)
                 {
-                    try
-                    {
                         reader.Close();
-                    }
-                    catch (Exception ex)
-                    {
-                        Console.WriteLine($"Ошибка при закрытии файла: {ex.Message}");
-                    }
                 }
             }
         }
 
-        public void SearchInLog(string searchTerm)
+        public void SearchInLog(string search)
         {
             StreamReader reader = null;
             try
@@ -91,7 +72,7 @@ namespace lab12
                     string line;
                     while ((line = reader.ReadLine()) != null)
                     {
-                        if (line.Contains(searchTerm))
+                        if (line.Contains(search))
                         {
                             Console.WriteLine(line);
                         }
@@ -110,14 +91,7 @@ namespace lab12
             {
                 if (reader != null)
                 {
-                    try
-                    {
                         reader.Close();
-                    }
-                    catch (Exception ex)
-                    {
-                        Console.WriteLine($"Ошибка при закрытии файла: {ex.Message}");
-                    }
                 }
             }
         }
@@ -147,7 +121,6 @@ namespace lab12
                     string line;
                     while ((line = reader.ReadLine()) != null)
                     {
-                        // Попробуем извлечь дату из начала строки
                         if (line.Length >= 19 && DateTime.TryParseExact(line.Substring(0, 19), "dd.MM.yyyy HH:mm:ss", null, System.Globalization.DateTimeStyles.None, out DateTime logDate))
                         {
                             if (logDate >= startDate && logDate <= endDate)
@@ -163,11 +136,6 @@ namespace lab12
                 Console.WriteLine($"Ошибка при поиске в файле: {ex.Message}");
             }
         }
-
-
-
-
-
 
 
     }

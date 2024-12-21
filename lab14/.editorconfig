@@ -1,0 +1,4 @@
+﻿[*.cs]
+
+# SYSLIB0024: Тип или член устарел
+dotnet_diagnostic.SYSLIB0024.severity = none

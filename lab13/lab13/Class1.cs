@@ -1,8 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
+using Newtonsoft.Json.Serialization;
 
 namespace lab13
 {
@@ -13,12 +17,20 @@ namespace lab13
         void Show();
     }
     [Serializable]
+    [XmlInclude(typeof(PC))]
+    [XmlInclude(typeof(Technique))]
+    [DataContract]
     public abstract class Product
         {
-            public int id_department;
-            public string name_department;
-            public int price;
-            public string name;
+        [DataMember]
+        public int id_department;
+        [NonSerialized]
+        [XmlIgnore]
+        public string name_department;
+        [DataMember]
+        public int price;
+        [DataMember]
+        public string name;
             public void set_dep(int id_department, string name_department)
             {
                 this.id_department = id_department;
@@ -46,9 +58,14 @@ namespace lab13
 
         }
     [Serializable]
+    [DataContract]
     public abstract class Technique : Product
     {
+        [XmlElement]
+        [DataMember]
         public int id_tech;
+        [XmlElement]
+        [DataMember]
         public string name_tech;
 
         public Technique()
@@ -71,10 +88,23 @@ namespace lab13
         public abstract void Show();
     }
     [Serializable]
+    [DataContract]
     public class PC : Technique, Ipowerable
     {
-        private int ram_pc;
-        static int count_pc = 0;
+        [DataMember]
+        public int ram_pc;
+
+        static public int count_pc = 0;
+
+
+        public PC()
+        {
+           set_price(-1);
+            this.name = "default";
+            set_tech(2);
+            count_pc++;
+            this.ram_pc = 0;
+        }
 
         public PC(int price = -1, string name = "(", int ram_pc = 0)
         {
@@ -132,7 +162,6 @@ namespace lab13
         public override int GetHashCode()
         {
             int hash = (name, ram_pc).GetHashCode();
-            Console.WriteLine($"\nHash: {hash}");
             return hash;
         }
     }

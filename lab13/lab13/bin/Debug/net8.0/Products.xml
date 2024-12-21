@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Products>
+  <PCs>
+    <PC>
+      <name>Gaming PC</name>
+      <price>16000</price>
+      <ram>16000</ram>
+    </PC>
+    <PC>
+      <name>Office PC</name>
+      <price>4000</price>
+      <ram>8GB</ram>
+    </PC>
+  </PCs>
+  <Laptops>
+    <Laptop>
+      <name>Gaming Laptop</name>
+      <price>20000</price>
+      <ram>32GB</ram>
+    </Laptop>
+    <Laptop>
+      <name>Super Laptop</name>
+      <price>12000</price>
+      <ram>16GB</ram>
+    </Laptop>
+  </Laptops>
+</Products>
