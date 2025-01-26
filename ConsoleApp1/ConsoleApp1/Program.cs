@@ -29,7 +29,7 @@ namespace ConsoleApp1
 
             //ex3_3();
 
-            //ex4_1();
+            ex4_1();
 
             (int max, int min, int sum, char firstChar) funcArr(int[] arr, string hi)
             {
@@ -377,7 +377,7 @@ namespace ConsoleApp1
             Console.WriteLine(myTuple.Item4);
             Console.WriteLine(myTuple.Item5);
 
-            (int number, string text1, char symbol, string text2, ulong largeNumber) = myTuple;
+            (var number, string text1, char symbol, string text2, ulong largeNumber) = myTuple;
 
             Console.WriteLine($"number: {number}");
             Console.WriteLine($"text1: {text1}");
